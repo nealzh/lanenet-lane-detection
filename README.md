@@ -30,9 +30,15 @@ download the model and put them in folder model/tusimple_lanenet/
 You can test a single image on the trained model as follows
 
 ```
+export PYTHONPATH=.
+
 python tools/test_lanenet.py --is_batch False --batch_size 1 
 --weights_path path/to/your/model_weights_file 
 --image_path data/tusimple_test_image/0.jpg
+
+python3 tools/test_lanenet.py --is_batch False --batch_size 1 --weights_path model/tusimple_lanenet/tusimple_lanenet_vgg_2018-10-19-13-33-56.ckpt-200000 --image_path data/tusimple_test_image/0.jpg
+
+python3 tools/test_lanenet.py --is_batch True --weights_path model/tusimple_lanenet/tusimple_lanenet_vgg_2018-10-19-13-33-56.ckpt-200000 --image_path data/tusimple_test_image/
 ```
 The results are as follows:
 
